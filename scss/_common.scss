@@ -1,0 +1,172 @@
+*::after,
+*::before {
+  @apply text-[0] leading-none;
+}
+.fa-solid::after,
+.fa-solid::before,
+.fa-brands::after,
+.fa-brands::before,
+.fa-regular::after,
+.fa-regular::before {
+  @apply text-base leading-[1];
+}
+html {
+  @apply scroll-smooth;
+}
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.nav-sticky {
+  @apply top-0 py-1.5 backdrop-blur-2xl  transition-all duration-500;
+}
+
+.mobile-menu {
+  @apply fixed right-0 top-0 z-[111111] mx-auto flex h-screen w-full translate-x-full  items-center   rounded-none bg-primary p-2.5 px-10 shadow-nav backdrop-blur transition duration-500  ease-in-out dark:bg-dark;
+  &.open {
+    @apply translate-x-0;
+  }
+}
+.active {
+  @apply border-borderColor bg-white dark:border-borderColor/10 dark:bg-dark-200;
+}
+.section-tagline {
+  @apply mb-3 font-medium uppercase leading-[1.3];
+}
+.faq-item:has(.open) {
+  @apply shadow-nav;
+}
+.faq-body {
+  transition: height 300ms ease;
+  @apply transition-[height] duration-300 ease-in-out;
+}
+.faq-header {
+  .plus {
+    @apply inline-block;
+  }
+  .minus {
+    @apply hidden;
+  }
+  &.open {
+    .plus {
+      @apply hidden;
+    }
+    .minus {
+      @apply inline-block;
+    }
+  }
+}
+.faq-body.close {
+  @apply hidden;
+}
+
+.faq-body.collapsing {
+  @apply h-0 overflow-hidden;
+}
+
+.faq-body.open {
+  @apply block;
+}
+
+.social-link {
+  li {
+    a {
+      &:hover {
+        svg {
+          path {
+            @apply fill-primary transition-all duration-300 ease-linear;
+          }
+        }
+      }
+    }
+    svg {
+      path {
+        @apply fill-paragraph transition-all duration-300 ease-linear dark:fill-gray-100;
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  @apply h-[9px] w-[9px] rounded-full border border-paragraph bg-transparent opacity-100 dark:border-primary;
+
+  &.swiper-pagination-bullet-active {
+    @apply h-3.5 w-3.5 rounded-full border border-paragraph bg-primary dark:border-primary dark:bg-primary/25;
+  }
+}
+.swiper-pagination-bullets {
+  @apply mx-auto flex items-center  justify-center;
+}
+
+//Facybox styles
+.f-button {
+  svg {
+    @apply stroke-white;
+  }
+}
+.fancybox__container {
+  @apply z-[1111111100];
+}
+.fancybox__carousel {
+  @apply z-[111111110000];
+}
+
+// Motion Animation
+#rect,
+#rect-2,
+#rect-3,
+#rect-4,
+#rect-5,
+#rect-6 {
+  opacity: 0;
+}
+
+// Single Page Css
+
+.singlePage {
+  h2 {
+    @apply mb-9;
+  }
+  h3 {
+    @apply mb-5 mt-12;
+  }
+  p {
+    @apply mb-12;
+  }
+  ul {
+    @apply mb-12;
+    li {
+      @apply relative pl-10 font-jakarta_sans font-semibold dark:text-white;
+      &:not(:last-child) {
+        @apply mb-6;
+      }
+      &:before {
+        @apply absolute left-0 h-7 w-7 text-paragraph  content-[url('/images/checkmark.svg')] dark:text-primary dark:content-[url('/images/checkmark-dark.svg')] max-md:top-0 md:top-1/2 md:-translate-y-1/2;
+      }
+    }
+  }
+  div {
+    @apply mb-16;
+  }
+}
+
+// Modal
+.modal {
+  &-bg {
+    @apply fixed left-0 top-0 z-[1000000000000] h-full w-full bg-[#1c1c1c30] opacity-100 backdrop-blur-md;
+  }
+
+  &-align {
+    @apply flex h-[100vh] w-[100vw] items-center justify-center;
+  }
+  &-content {
+    @apply relative z-50 aspect-video max-h-40 w-[800px] bg-transparent  bg-white max-md:w-[100vw] max-sm:w-full;
+  }
+
+  &-close {
+    @apply absolute -top-12 right-4 cursor-pointer rounded-full bg-primary px-[18px] py-3 text-base dark:text-paragraph lg:-right-8 lg:-top-8;
+  }
+  &-video-align {
+    @apply aspect-video w-full;
+  }
+}

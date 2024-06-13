@@ -1,0 +1,20 @@
+@layer utilities {
+  .container {
+    @apply mx-auto max-1xl:px-5 1xl:max-w-[1290px];
+  }
+  .container-fluid {
+    @apply w-full  px-4 1xl:mx-auto;
+  }
+  .stop-color {
+    stop-color: theme("colors.gray.200");
+  }
+  .stop-color-dark {
+    stop-color: theme("colors.gray.darkGradient");
+  }
+  .badge {
+    @apply text-sm inline-block border mb-2 px-3 py-1 rounded-full border-primary text-primary bg-primary/10 leading-6;
+    &-primary {
+      @apply bg-primary text-paragraph dark:text-paragraph text-sm font-medium;
+    }
+  }
+}

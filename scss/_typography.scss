@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@600&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@layer base {
+  body {
+    @apply text-paragraph dark:text-white;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-jakarta_sans text-paragraph dark:text-white;
+  }
+
+  h1 {
+    @apply text-[36px] max-xl:leading-[1.33] xl:text-[64px] font-bold leading-[1.2];
+  }
+
+  h2 {
+    @apply text-[32px] xl:text-[36px] font-bold leading-[1.33];
+  }
+
+  h3 {
+    @apply text-[22px] xl:text-[24px] font-semibold;
+  }
+
+  h4 {
+    @apply text-xl font-normal;
+  }
+
+  h5 {
+    @apply text-lg font-normal;
+  }
+
+  h6 {
+    @apply text-base font-normal;
+  }
+  p {
+    @apply font-Inter text-base font-normal leading-[1.75]  -tracking-[0.3px] text-paragraph dark:text-white;
+  }
+  em {
+    @apply not-italic;
+  }
+  a {
+    @apply inline-block font-Inter text-base font-normal leading-[1.75]  -tracking-[0.3px]  text-paragraph dark:text-white;
+  }
+}

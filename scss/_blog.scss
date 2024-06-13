@@ -1,0 +1,38 @@
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+.swiper-pagination {
+  @apply mt-12;
+}
+.blog-details {
+  @apply mx-auto max-w-[850px];
+  h2 {
+    @apply mb-3 max-w-[650px] font-semibold leading-[1.33];
+  }
+  &-body {
+    @apply mx-auto max-w-[850px];
+    img {
+      @apply mb-12;
+    }
+    h3 {
+      @apply mb-5 mt-12;
+    }
+    p {
+      @apply mb-12;
+    }
+    ul {
+      @apply mb-12;
+      li {
+        @apply relative pl-10 font-jakarta_sans font-semibold dark:text-white;
+        &:not(:last-child) {
+          @apply mb-6;
+        }
+        &:before {
+          @apply absolute left-0 h-7 w-7 text-paragraph  content-[url('/images/checkmark.svg')] dark:text-primary dark:content-[url('/images/checkmark-dark.svg')] max-md:top-0 md:top-1/2 md:-translate-y-1/2;
+        }
+      }
+    }
+    div {
+      @apply my-16;
+    }
+  }
+}

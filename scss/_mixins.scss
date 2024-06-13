@@ -1,0 +1,19 @@
+// Marquee CSS
+
+.marquee-content-list {
+  @apply after:absolute after:right-11 after:top-1/2 after:h-[60px] after:w-[1px] after:-translate-y-1/2 after:content-[url('/images/clients/client-item-border.svg')] dark:after:content-[url('/images/clients/client-item-border-dark.svg')];
+}
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+
+    &.tabActive {
+      display: block;
+    }
+  }
+
+  > .tabActive {
+    display: block;
+  }
+}
